@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Surprise for You</title>
+    <title>Special Surprise for Courtney</title>
     <style>
         :root {
-            --primary-bg: #fff0f5;
+            --primary-bg: #fff5f7;
             --card-bg: #ffffff;
             --accent-pink: #ff6b8b;
             --text-dark: #4a4a4a;
@@ -204,27 +204,27 @@
 <body>
 
     <div id="lock-screen" class="container">
-        <div style="font-size: 50px; margin-bottom: 10px;">🎁</div>
-        <h1>Special Surprise</h1>
-        <p>Enter your birthdate to unlock your gift.</p>
+        <div style="font-size: 50px; margin-bottom: 10px;">🎂</div>
+        <h1>Special Birthday Surprise</h1>
+        <p>Enter your birthdate to unlock your gift, Courtney!</p>
         <input type="date" id="birthdate-input">
-        <button onclick="unlockSite()">Unlock My Gift</button>
-        <p id="lock-error" style="color: red; font-size: 14px; margin-top: 10px; display: none;">That is not the magic date! Try again. 💕</p>
+        <button onclick="unlockSite()">Unlock Your Gift ✨</button>
+        <p id="lock-error" style="color: red; font-size: 14px; margin-top: 10px; display: none;">That is not your birthdate! Try again. 🤔🎉</p>
     </div>
 
     <div id="main-content" class="container hidden">
-        <h1>Happy Birthday, Love! 💖</h1>
-        <p>To my beautiful girlfriend. On this special day, I created this space just for you to celebrate us.</p>
+        <h1>Happy Birthday, Courtney! 🥳✨</h1>
+        <p>To my absolute best friend! Today is all about you, so I coded this custom page to celebrate your special day.</p>
         
         <div class="spotify-wrapper">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2eAvDnpXP5MDcVti0PUxV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2eaV0npXPSMDbVtiI0PUxV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <hr class="section-divider">
 
         <div id="candle-section">
-            <h2>Make a Wish! ✨</h2>
-            <p>Make a wish and click the button to blow out the candle.</p>
+            <h2>Make a Wish! 🕯️</h2>
+            <p>Close your eyes, make a huge wish, and blow out the candle!</p>
             <div class="candle-container">
                 <div class="candle">
                     <div id="candle-flame" class="flame"></div>
@@ -236,7 +236,8 @@
         <hr class="section-divider">
 
         <div id="story-section">
-            <h2>Time Since You Said "YES" 📆</h2>
+            <h2>Countdown to Your Next Chapter ⏰</h2>
+            <p>Time passed since the start of your birthday year:</p>
             <div class="timer-grid">
                 <div class="timer-box"><div class="timer-num" id="days">00</div><div class="timer-label">Days</div></div>
                 <div class="timer-box"><div class="timer-num" id="hours">00</div><div class="timer-label">Hours</div></div>
@@ -247,28 +248,30 @@
 
         <hr class="section-divider">
 
-        <h2>Our Love Story 💌</h2>
-        <p>I left something special for you inside this letter.</p>
-        <button onclick="toggleModal('letter-modal', true)">Click to open my Love Letter</button>
+        <h2>A Message For My Best Friend 🌟</h2>
+        <p>I left a letter for you right here.</p>
+        <button onclick="toggleModal('letter-modal', true)">Open Best Friend Letter ✉️</button>
     </div>
 
     <div id="letter-modal" class="modal hidden">
         <div class="modal-content">
-            <h2>You Are Loved! ❤️</h2>
-            <p style="text-align: left; max-height: 250px; overflow-y: auto; margin-top: 15px;">
-                Happy Birthday, My Love!<br><br>
-                First of all, I want to thank you for your love, your care, and all the little moments that make my days brighter. You have been such a blessing in my life, and I never stop being grateful for the way you make everything feel lighter, warmer, and happier just by being you.<br><br>
-                Every single day with you feels like a dream come true. You make my heart skip a beat, my face light up, and my life infinitely better. Thank you for being YOU!
+            <h2>To An Amazing Friend! 💛</h2>
+            <p style="text-align: left; max-height: 250px; overflow-y: auto; margin-top: 15px; font-size: 15px;">
+                Happy Birthday, Courtney!<br><br>
+                I wanted to create something unique to remind you of how incredibly grateful I am to have you as my best friend. Thank you for always being there, for the endless laughs, and for being such a brilliant light in my life.<br><br>
+                Today marks another year of you being completely awesome. I hope your day is packed with happiness, fun, and everything you've been wishing for. You deserve the absolute best today and every single day!<br><br>
+                Cheers to you, your birthday, and many more memories ahead! 🎉🌟
             </p>
-            <button style="margin-top: 15px;" onclick="toggleModal('letter-modal', false)">Close & Open Again</button>
+            <button style="margin-top: 15px;" onclick="toggleModal('letter-modal', false)">Close Letter</button>
         </div>
     </div>
 
     <script>
-        // CONFIGURATION: Set your magic dates here
-        // Format MUST stay YYYY-MM-DD
-        const TARGET_BIRTHDATE = "2004-01-09"; 
-        const ANNIVERSARY_DATE = "2025-05-15T00:00:00"; // Include local time for precise tracking
+        // CONFIGURATION: Courtney's exact birthday passcode
+        const TARGET_BIRTHDATE = "2007-06-10"; 
+        
+        // Tracks time elapsed starting from her birthday date today
+        const START_TIME = new Date("2026-06-10T00:00:00");
 
         // Function to Unlock the Website
         function unlockSite() {
@@ -280,7 +283,7 @@
                 document.getElementById('main-content').classList.remove('hidden');
                 errorMsg.style.display = "none";
                 
-                // Start Relationship Timer
+                // Start Timer
                 setInterval(updateTimer, 1000);
             } else {
                 errorMsg.style.display = "block";
@@ -294,27 +297,26 @@
             
             if (!flame.classList.contains('hidden')) {
                 flame.classList.add('hidden');
-                btn.innerText = "Wish Made! 🎉";
+                btn.innerText = "Wish Made! 🥳✨";
                 btn.style.background = "#2ecc71";
                 btn.disabled = true;
             }
         }
 
-        // Function to calculate and show relationship duration
+        // Function to calculate and show live counter metrics
         function updateTimer() {
-            const startDate = new Date(ANNIVERSARY_DATE);
             const now = new Date();
-            const difference = now - startDate;
+            const difference = now - START_TIME;
 
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-            document.getElementById('days').innerText = String(days).padStart(2, '0');
-            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+            document.getElementById('days').innerText = String(Math.abs(days)).padStart(2, '0');
+            document.getElementById('hours').innerText = String(Math.abs(hours)).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(Math.abs(minutes)).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(Math.abs(seconds)).padStart(2, '0');
         }
 
         // Modal Utility
